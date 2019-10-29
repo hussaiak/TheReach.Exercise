@@ -11,14 +11,32 @@ namespace TheReach.Exercise.Repository
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
               : base(options)
         {
-        }
-        
+        } 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         { 
             modelBuilder.Entity<Country>()
                 .HasData(
-                    new Country
+                    InitializeCountries()
+                );
+
+            modelBuilder.Entity<Postcode>()
+                .HasData(
+                    InitializePostcodes()
+                );
+        }
+
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<Postcode> Postcodes { get; set; }
+
+        public DbSet<Country> Countries { get; set; }
+
+        public List<Country> InitializeCountries()
+        {
+            return new List<Country>
+            {
+                 new Country
                     {
                        Id = 1,
                        CountryName = "Australia",
@@ -78,11 +96,14 @@ namespace TheReach.Exercise.Repository
                         CountryName = "United States",
                         CountryCode = "US",
                     }
-                );
+            };
+        }
 
-            modelBuilder.Entity<Postcode>()
-                .HasData(
-                    new Postcode
+        public List<Postcode> InitializePostcodes()
+        {
+            return new List<Postcode>
+            {
+                new Postcode
                     {
                         Id = 50,
                         Pcode = "2000",
@@ -162,14 +183,7 @@ namespace TheReach.Exercise.Repository
                         State = "QLD",
                         Category = "Delivery Area"
                     }
-                );
+            };
         }
-
-        public DbSet<User> Users { get; set; }
-
-        public DbSet<Postcode> Postcodes { get; set; }
-
-        public DbSet<Country> Countries { get; set; }
-
     }
 }
