@@ -14,6 +14,8 @@ namespace TheReach.Exercise.DataModel.Models
 
         public string State { get; set; }
 
+        public string Locality { get; set; }
+
         public string Country { get; set; }
     }
 }

@@ -31,5 +31,31 @@ namespace TheReach.Exercise.Web.Controllers
             }
             return StatusCode((int)HttpStatusCode.NoContent);
         }
+
+        [Route("States/{countryCode}"), HttpGet]
+
+        public async Task<IActionResult> GetStatesByCountryCode(string countryCode)
+        {
+            var response = await _postService.GetStatesByCountryCode(countryCode);
+            //Successful
+            if (response != null)
+            {
+                return StatusCode((int)HttpStatusCode.OK, response);
+            }
+            return StatusCode((int)HttpStatusCode.NoContent);
+        }
+
+        [Route("Localities/{stateCode}"), HttpGet]
+
+        public async Task<IActionResult> GetLocalityByStateCode(string stateCode)
+        {
+            var response = await _postService.GetLocalityByStateCode(stateCode);
+            //Successful
+            if (response != null)
+            {
+                return StatusCode((int)HttpStatusCode.OK, response);
+            }
+            return StatusCode((int)HttpStatusCode.NoContent);
+        }
     }
 }

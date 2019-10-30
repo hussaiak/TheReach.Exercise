@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using TheReach.Exercise.DataModel;
 
 namespace TheReach.Exercise.Repository.DBRepository
@@ -18,13 +19,13 @@ namespace TheReach.Exercise.Repository.DBRepository
             this.context = context; 
             entities = context.Set<T>();
         }
-        public IEnumerable<T> GetAll()
+        public Task<IEnumerable<T>> GetAll()
         {
-            return entities.AsEnumerable();
+            return Task.FromResult(entities.AsEnumerable());
         } 
-        public T Get(long id)
+        public Task<T> Get(long id)
         {
-            return entities.SingleOrDefault(s => s.Id == id);
+            return Task.FromResult(entities.SingleOrDefault(s => s.Id == id));
         }
         public void Insert(T entity)
         {

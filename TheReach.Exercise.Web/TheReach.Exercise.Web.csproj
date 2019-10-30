@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\app\user.controller.js~RFed7d4e5.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
@@ -14,6 +18,10 @@
   <ItemGroup>
     <ProjectReference Include="..\TheReach.Exercise.DataModel\TheReach.Exercise.DataModel.csproj" />
     <ProjectReference Include="..\TheReach.Exercise.Repository\TheReach.Exercise.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Filters\" />
   </ItemGroup>
 
 </Project>

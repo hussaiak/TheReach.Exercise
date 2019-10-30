@@ -109,6 +109,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "2000",
                         Locality = "Sydney",
                         State ="NSW",
+                        CountryCode = "AU",
                         Category= "Delivery Area"
                     },
                     new Postcode
@@ -117,6 +118,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "2140",
                         Locality = "Homebush",
                         State = "NSW",
+                        CountryCode = "AU",
                         Category = "Delivery Area"
                     },
                     new Postcode
@@ -125,6 +127,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "2133",
                         Locality = "Parametta",
                         State = "NSW",
+                        CountryCode = "AU",
                         Category = "Delivery Area"
                     },
                     new Postcode
@@ -133,6 +136,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "2840",
                         Locality = "AARONS PASS",
                         State = "NSW",
+                        CountryCode = "AU",
                         Category = "Delivery Area"
                     },
                     new Postcode
@@ -141,6 +145,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "3737",
                         Locality = "ABBEYARD",
                         State = "VIC",
+                        CountryCode = "AU",
                         Category = "Delivery Area"
                     },
                     new Postcode
@@ -149,6 +154,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "2610",
                         Locality = "ACTON",
                         State = "ACT",
+                        CountryCode = "AU",
                         Category = "Delivery Area"
                     },
                     new Postcode
@@ -157,6 +163,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "5159",
                         Locality = "ABERFOYLE PARK",
                         State = "SA",
+                        CountryCode = "AU",
                         Category = "Delivery Area"
                     },
                     new Postcode
@@ -165,6 +172,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "6280",
                         Locality = "ABBA RIVER",
                         State = "WA",
+                        CountryCode = "AU",
                         Category = "Delivery Area"
                     },
                     new Postcode
@@ -173,6 +181,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "7360",
                         Locality = "ACACIA HILLS",
                         State = "TAS",
+                        CountryCode = "AU",
                         Category = "Delivery Area"
                     },
                     new Postcode
@@ -181,6 +190,7 @@ namespace TheReach.Exercise.Repository
                         Pcode = "3918",
                         Locality = "ABBEYWOOD",
                         State = "QLD",
+                        CountryCode = "AU",
                         Category = "Delivery Area"
                     }
             };

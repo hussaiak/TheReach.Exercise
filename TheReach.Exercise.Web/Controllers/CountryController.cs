@@ -22,9 +22,9 @@ namespace TheReach.Exercise.Web.Controllers
 
 
         [HttpGet]
-        public IActionResult GetCountries()
+        public async Task<IActionResult> GetCountries()
         {
-            var response = _countryService.GetCountries();
+            var response = await _countryService.GetCountries();
             //Successful
             if (response != null)
             {

@@ -9,8 +9,8 @@ namespace TheReach.Exercise.Web.Services
 {
     public interface ICountryService
     {
-        IEnumerable<Country> GetCountries();
-        Country GetCountry(long id); 
+        Task<IEnumerable<Country>> GetCountries();
+        Task<Country> GetCountry(long id); 
     }
     public class CountryService : ICountryService
     {
@@ -21,13 +21,13 @@ namespace TheReach.Exercise.Web.Services
             _countryRepository = countryRepository;
         }
 
-        public IEnumerable<Country> GetCountries()
+        public async Task<IEnumerable<Country>> GetCountries()
         {
-            return _countryRepository.GetAll();
+            return await _countryRepository.GetAll();
         }
-        public Country GetCountry(long id)
+        public async Task<Country> GetCountry(long id)
         {
-            return _countryRepository.Get(id);
+            return await _countryRepository.Get(id);
         }
     }
 }

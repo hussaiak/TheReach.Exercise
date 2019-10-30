@@ -9,6 +9,7 @@ namespace TheReach.Exercise.DataModel.Models
         public string Pcode { get; set; }
         public string Locality { get; set; }
         public string State { get; set; }
+        public string CountryCode { get; set; }        
         public string Comments { get; set; }
         public string DeliveryOffice { get; set; }
         public string PreSortIndicator { get; set; }

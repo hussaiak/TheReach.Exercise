@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.textarea-vertical-align {
+    /*padding-top: 25px;*/
+    box-sizing: border-box;
+    height: 70px;
+}
+
+.td-padding-right {
+    padding-right: 10px;
+}
+
+.td-padding-left {
+    padding-left: 10px;
+}
+
+.header-align {
+    margin-top: 20px;
+    background-color: darkgreen;
+    color: ghostwhite;
+    font-family: Calibri;
+    height: 50px;
+    vertical-align: middle;
+} 
